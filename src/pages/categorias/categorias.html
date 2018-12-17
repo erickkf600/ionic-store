@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+    <ion-title>Categorias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <ion-fab top right edge>
+        <button navPush="CarrinhoPage" ion-fab color="dark">
+          <ion-icon name="cart"></ion-icon>
+        </button>
+    </ion-fab>  
+
+    <ion-content>
+      <ion-item-group *ngFor="let c of categorias">
+        <ion-item (click)="navProdutos(c.id)">{{c.nome}}</ion-item>         
+        </ion-item-group>
+      </ion-content>
+</ion-content>
